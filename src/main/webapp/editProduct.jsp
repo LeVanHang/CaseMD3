@@ -30,6 +30,10 @@
                 <td>nhập Price</td>
                 <td><input type="text" name="price" value="${p.price}" ></td>
             </tr>
+            <tr>
+                <td>nhập Amount</td>
+                <td><input type="text" name="amount" value="${p.amount}" ></td>
+            </tr>
         </table>
         <button type="submit"> Submit</button>
     </form>

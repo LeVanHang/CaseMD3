@@ -27,7 +27,7 @@ public abstract class ProductService implements IProductService{
 
     public static void edit (Product product) {
         for (int i = 0; i < products.size(); i++) {
-            if (products.get(product.getId()) == id) {
+            if (products.get(i).getId() == product.getId()) {
                 products.set(i, product);
             }
         }
