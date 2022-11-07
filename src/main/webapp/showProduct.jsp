@@ -31,7 +31,7 @@
 <body>
 <div class="container mt-3">
     <h2>Danh Sách Sản Phẩm</h2>
-    <a type="button" href="/createProduct.jsp"> create</a>
+    <a type="button" href="/createProduct.jsp" class="btn btn-warning"> create</a>
     <table class="table table-dark">
         <thead>
         <tr>
@@ -44,14 +44,14 @@
         </tr>
         </thead>
         <tbody>
-        <c:forEach items="${sanphams}" var="sp">
+        <c:forEach items="${products}" var="sp">
             <tr>
                 <td>${sp.id}</td>
                 <td>${sp.name}</td>
                 <td><img src="${sp.img}" height="200" width="250"></td>
                 <td>${sp.price}</td>
                 <td><a type="button" class="btn btn-danger" href="/edit?id=${sp.id}">Edit</a></td>
-                <td><a type="button" class="btn btn-success" href="/delete?name=${sp.name}">Delete</a></td>
+                <td><a type="button" class="btn btn-success" href="/DeleteProductServlet?id=${sp.id}">Delete</a></td>
             </tr>
         </c:forEach>
         </tbody>

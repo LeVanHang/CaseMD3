@@ -10,16 +10,13 @@ import service.ProductService;
 
 import java.io.IOException;
 
-@WebServlet(urlPatterns = "/delete")
+@WebServlet(urlPatterns = "/DeleteProductServlet")
 public class DeleteProductServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String name = req.getParameter("name");
-        for (int i = 0; i < ProductService.products.size(); i++) {
-            ProductService.products.remove(i);
-        }
+        int id = Integer.parseInt(req.getParameter("id"));
+        ProductService.delete(id);
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/product");
+        dispatcher.forward(req,resp);
     }
-
-    RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("products");
-
 }

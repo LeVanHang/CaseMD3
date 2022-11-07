@@ -10,7 +10,7 @@ import service.ProductService;
 
 import java.io.IOException;
 
-@WebServlet(urlPatterns = "/create")
+@WebServlet(urlPatterns = "/createProduct")
 public class CreateProductServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -21,6 +21,6 @@ public class CreateProductServlet extends HttpServlet {
         int amount = Integer.parseInt(req.getParameter("amount"));
 
         ProductService.add (new Product(id, name, price, img, amount));
-        resp.sendRedirect("/products");
+        resp.sendRedirect("/product");
     }
 }

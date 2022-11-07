@@ -12,7 +12,7 @@
 </head>
 <body>
 <div align="center">
-  <form action="/create">
+  <form action="/createProduct">
     <table>
       <tr>
         <td>nhập ID</td>
@@ -29,6 +29,10 @@
       <tr>
         <td>nhập Price</td>
         <td><input type="text" name="price" placeholder="nhập giá"></td>
+      </tr>
+      <tr>
+        <td>nhập Amount</td>
+        <td><input type="text" name="amount" placeholder="Enter amount"></td>
       </tr>
 
     </table>

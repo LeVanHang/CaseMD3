@@ -50,10 +50,10 @@
     </tr>
     </thead>
     <tbody>
-    <c:forEach items="${sanphams}" var="sp">
+    <c:forEach items="${products}" var="sp">
       <tr>
         <td>${sp.id}</td>
-        <td>${sp.name}</td>
+<%--        <td>${sp.name}</td>--%>
         <td><img src="${sp.img}" height="200" width="250"></td>
         <td>${sp.price}</td>
         <td><a type="button" class="btn btn-danger" href="/edit?id=${sp.id}">Edit</a></td>
