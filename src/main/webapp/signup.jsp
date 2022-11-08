@@ -127,29 +127,25 @@
 </head>
 <body>
 <div id="logreg-forms">
-
-  <form action="signup" method="post" class="form-signup">
+  <form class="form-signin" action="/signup" >
+    <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign up</h1>
     <div class="social-login">
       <button class="btn facebook-btn social-btn" type="button"><span><i class="fab fa-facebook-f"></i> Sign up with Facebook</span> </button>
-    </div>
-    <div class="social-login">
       <button class="btn google-btn social-btn" type="button"><span><i class="fab fa-google-plus-g"></i> Sign up with Google+</span> </button>
     </div>
+    <p style="text-align:center"> OR  </p>
 
-    <p style="text-align:center">OR</p>
-
-    <input type="text" id="user-name" name="id"class="form-control" name="" value="0" required="" readonly autofocus="">
+    <input type="text" id="user-name" name="id"class="form-control" name="" value="1" required="" readonly autofocus="">
     <input type="text" id="user-email" class="form-control" name="username" placeholder="Username" required autofocus="">
     <input type="password" id="user-pass" class="form-control" name="password" placeholder="Password" required autofocus="">
     <input type="text" id="add" class="form-control" name="address" placeholder="Address" required autofocus="">
     <input type="date" id="birth" class="form-control" name="birthday" placeholder="Birthday" required autofocus="">
     <input type="text" id="idrole" class="form-control" name="id_role" placeholder="Id_role" value="2" readonly required autofocus="">
 
-
-    <button class="btn btn-primary btn-block" type="submit"><i class="fas fa-user-plus"></i> Sign Up</button>
-    <a href="#" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>
+    <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Sign up</button>
+    <hr>
+    <!-- <p>Don't have an account!</p>  -->
   </form>
-  <br>
 
 </div>
 <p style="text-align:center">

@@ -10,6 +10,9 @@ import models.Account;
 import service.AccountService;
 
 import java.io.IOException;
+import java.sql.SQLException;
+import java.time.DateTimeException;
+import java.time.LocalDate;
 import java.util.Date;
 
 @WebServlet(urlPatterns = "/signup")
@@ -21,10 +24,16 @@ public class SignupServlet extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         String address = request.getParameter("address");
-        Date birth = (Date) request.getParameter("birthday");
-        int role = Integer.parseInt(request.getParameter("id_role"));
-        AccountService.addAccount(new Account(id,username,password,address,birth,role));
+        LocalDate birthday = null;
+        try{
+             birthday = LocalDate.parse(request.getParameter("birthday"));
+        }catch (Exception e){
+            e.printStackTrace();
+        }
 
+        int role = Integer.parseInt(request.getParameter("id_role"));
+
+        AccountService.addAccount(new Account(id,username,password,address,birthday,role));
         response.sendRedirect("/login");
     }
 

@@ -1,5 +1,6 @@
 package models;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Account {
@@ -7,13 +8,13 @@ public class Account {
     private String username;
     private String password;
     private String address;
-    private Date brithday;
+    private LocalDate brithday;
     private int id_role;
 
     public Account() {
     }
 
-    public Account(int id, String username, String password, String address, Date brithday, int id_role) {
+    public Account(int id, String username, String password, String address, LocalDate brithday, int id_role) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -56,11 +57,11 @@ public class Account {
         this.address = address;
     }
 
-    public Date getBrithday() {
+    public LocalDate getBrithday() {
         return brithday;
     }
 
-    public void setBrithday(Date brithday) {
+    public void setBrithday(LocalDate brithday) {
         this.brithday = brithday;
     }
 

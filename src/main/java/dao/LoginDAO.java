@@ -23,7 +23,7 @@ public class LoginDAO {
                 String address = resultSet.getString("address");
                 Date birthday = resultSet.getDate("birthday");
                 int id_role = resultSet.getInt("id_role");
-                account = new Account(id, username1, password1, address, birthday, id_role);
+                account = new Account(id, username1, password1, address, birthday.toLocalDate(), id_role);
             }
             return account;
         } catch (SQLException throwables) {
